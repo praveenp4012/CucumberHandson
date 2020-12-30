@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="12.776741">
-    <testcase classname="Test the Search functionality of Google" name="Enter the text in Google Search Page" time="12.776741">
-        <system-out><![CDATA[Given URL of the Website....................................................passed
-When Some text is entered in the search box.................................passed
-Then Home page should be opened.............................................passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="0.24779">
+    <testcase classname="Verify the scenarios using Tags" name="Verify Home page" time="0.247602">
+        <system-out><![CDATA[When clicking on home page..................................................passed
+Then home page should be opened.............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Verify the scenarios using Tags" name="Verify Mobiles page" time="0.000188">
+        <system-out><![CDATA[When clicking on mobiles page...............................................passed
+Then mobiles page should be opened..........................................passed
 ]]></system-out>
     </testcase>
 </testsuite>

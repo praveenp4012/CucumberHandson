@@ -1,79 +1,85 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("F:/Selenium/CucumberDemo/src/main/java/features/DataTableWithMapsGoogle.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("F:/Selenium/CucumberHandson/src/main/java/features/tagsDemo.feature");
 formatter.feature({
   "line": 1,
-  "name": "Test the Search functionality of Google",
+  "name": "Verify the scenarios using Tags",
   "description": "",
-  "id": "test-the-search-functionality-of-google",
+  "id": "verify-the-scenarios-using-tags",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "comments": [
-    {
-      "line": 3,
-      "value": "# Feature File driven by Data table"
-    }
-  ],
-  "line": 4,
-  "name": "Enter the text in Google Search Page",
+  "line": 9,
+  "name": "Verify Home page",
   "description": "",
-  "id": "test-the-search-functionality-of-google;enter-the-text-in-google-search-page",
+  "id": "verify-the-scenarios-using-tags;verify-home-page",
   "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 6,
-  "name": "URL of the Website",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 7,
-  "name": "Some text is entered in the search box",
-  "rows": [
+  "keyword": "Scenario",
+  "tags": [
     {
-      "cells": [
-        "text"
-      ],
-      "line": 8
-    },
-    {
-      "cells": [
-        "praveen"
-      ],
-      "line": 9
-    },
-    {
-      "cells": [
-        "kohli"
-      ],
-      "line": 10
+      "line": 8,
+      "name": "@regression"
     }
-  ],
+  ]
+});
+formatter.step({
+  "line": 10,
+  "name": "clicking on home page",
   "keyword": "When "
 });
 formatter.step({
   "line": 11,
-  "name": "Home page should be opened",
+  "name": "home page should be opened",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "StepDefinitionGoogleUsingMaps.url_of_the_Website()"
+  "location": "StepDefinitionForTags.clicking_on_home_page()"
 });
 formatter.result({
-  "duration": 9576610177,
+  "duration": 247531962,
   "status": "passed"
 });
 formatter.match({
-  "location": "StepDefinitionGoogleUsingMaps.some_text_is_entered_in_the_search_box(DataTable)"
+  "location": "StepDefinitionForTags.home_page_should_be_opened()"
 });
 formatter.result({
-  "duration": 3029028900,
+  "duration": 69696,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 19,
+  "name": "Verify Mobiles page",
+  "description": "",
+  "id": "verify-the-scenarios-using-tags;verify-mobiles-page",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 18,
+      "name": "@regression"
+    }
+  ]
+});
+formatter.step({
+  "line": 20,
+  "name": "clicking on mobiles page",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 21,
+  "name": "mobiles page should be opened",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StepDefinitionForTags.clicking_on_mobiles_page()"
+});
+formatter.result({
+  "duration": 108191,
   "status": "passed"
 });
 formatter.match({
-  "location": "StepDefinitionGoogleUsingMaps.home_page_should_be_opened()"
+  "location": "StepDefinitionForTags.mobiles_page_should_be_opened()"
 });
 formatter.result({
-  "duration": 171101902,
+  "duration": 79421,
   "status": "passed"
 });
 });
