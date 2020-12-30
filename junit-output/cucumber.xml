@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="0.24779">
-    <testcase classname="Verify the scenarios using Tags" name="Verify Home page" time="0.247602">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="0.265012">
+    <testcase classname="Verify the scenarios using Hooks" name="Verify Login page" time="0.264157">
+        <system-out><![CDATA[When clicking on login page.................................................passed
+Then login page should be opened............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Verify the scenarios using Hooks" name="Verify Home page" time="0.000429">
         <system-out><![CDATA[When clicking on home page..................................................passed
 Then home page should be opened.............................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Verify the scenarios using Tags" name="Verify Mobiles page" time="0.000188">
-        <system-out><![CDATA[When clicking on mobiles page...............................................passed
-Then mobiles page should be opened..........................................passed
+    <testcase classname="Verify the scenarios using Hooks" name="Verify Items page" time="0.000426">
+        <system-out><![CDATA[When clicking on items page.................................................passed
+Then items page should be opened............................................passed
 ]]></system-out>
     </testcase>
 </testsuite>

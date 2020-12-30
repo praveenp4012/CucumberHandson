@@ -1,0 +1,77 @@
+Cucumber-BDD Framework:
+	Feature file
+		Contains Gherkin keywords
+		Scenario/Scenario Outline
+	Step Definition file
+		Selenium Code
+		Java code/Annotations
+	Test Runner
+		To run the feature file and the corresponding Step definition file
+		To generate the reports
+
+===========================================
+
+src/
+├── main/
+│   └── java/
+|        └── ...
+│   
+└── test/
+    ├── java/
+    |    └── com.example/
+    |         ├── checkbox/
+    |         |    ├── CheckboxSteps/
+    |         |    └── CheckboxTest/
+    |         ├── click_button/
+    |         |    ├── ClickButtonSteps/
+    |         |    └── ClickButtonTest/
+    |         └── ...
+    |
+    └── resources/
+         └── features/
+              ├── checkbox/
+              |    └── checkbox.feature/
+              ├── click_button/
+              |    └── ClickButton.feature/
+              └── ...
+
+===========================================
+Cucumber Options:
+	features ==> We mention the feature file location here
+	glue ==> We mention the step definition file location here
+	format ==> To get proper html and json reports
+	dryRun
+		> If true ==> Gives the missing snippets of step definitions for all feature file steps
+				  ==> Code will not be executed i.e. all are skipped
+				  ==> No Errors in JUNIT reports for missing step definitions
+				  
+		> If false ==> Still gives the missing snippets of step definitions for all feature file steps
+				  ==> Code will be executed by skipping the missing step definitions
+	
+	monochrome ==> if TRUE, displays console output in a proper readable format
+	strict 
+		> If true ==> It strictly checkes for the missing step definitions 
+				      and fails the testcases incase of missing and also informs the missing snippets
+		> If false ==> Just passes the testcases and informs incase of missing step definitions
+	tags ==> Used to execute the testcases of our wish
+		= {"@smoketest"} ==> Executes only those testcases which have "smoketest" as the tag in the feature file
+		= {"@regressiontest"} ==> Executes only those testcases which have "regressiontest" as the tag in the feature file
+		= {"@smoketest , @regressiontest"} ==> Executes only those testcases which have either "smoketest" or "regressiontest" 
+												or both as the tag in the feature file
+		= {"@smoketest" , "@regressiontest"} ==> Executes only those testcases which have both "smoketest" and "regressiontest" 
+		= {"~@smoketest"} ==> Executes all the testcases by ignoring "smoketest" tagged testcases
+		= {"~@smoketest", "~@regressiontest"} ==> Executes all the testcases by ignoring "smoketest" and "regressiontest" tagged testcases
+		
+===========================================
+Data driven testing using Cucumber:
+	> Simple Data driven - Without Examples keyword == Regular Expression - \"(.*)\" OR \"([^\"]*)\"
+	> Data driven - With Example keyword == Regular Expression - \"(.*)\" OR \"([^\"]*)\" 
+		If we use Examples keyword, Use "Scenario Outline" instead of "Scenario" in the feature file
+	> Using Data table == Can be achieved by both List and Maps and with the class "DataTable"
+
+===========================================
+Hooks:
+	> Hooks are used to define the pre and post conditions in cucumber
+	
+Tagged Hooks:
+	> Execute hooks based on tags

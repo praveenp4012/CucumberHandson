@@ -3,34 +3,136 @@
     "line": 1,
     "elements": [
       {
-        "line": 9,
-        "name": "Verify Home page",
+        "before": [
+          {
+            "result": {
+              "duration": 323763,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitionForTaggedHooks.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 151549,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitionForTaggedHooks.forFirstScenario1()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Verify Login page",
         "description": "",
-        "id": "verify-the-scenarios-using-tags;verify-home-page",
+        "id": "verify-the-scenarios-using-hooks;verify-login-page",
+        "after": [
+          {
+            "result": {
+              "duration": 129668,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitionForTaggedHooks.tearDown()"
+            }
+          },
+          {
+            "result": {
+              "duration": 130478,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitionForTaggedHooks.forFirstScenario2()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 247531962,
+              "duration": 263376516,
               "status": "passed"
             },
-            "line": 10,
-            "name": "clicking on home page",
+            "line": 5,
+            "name": "clicking on login page",
             "match": {
-              "location": "StepDefinitionForTags.clicking_on_home_page()"
+              "location": "StepDefinitionForTaggedHooks.clicking_on_login_page()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 69696,
+              "duration": 45383,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "login page should be opened",
+            "match": {
+              "location": "StepDefinitionForTaggedHooks.login_page_should_be_opened()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@First"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 195716,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitionForTaggedHooks.setUp()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "Verify Home page",
+        "description": "",
+        "id": "verify-the-scenarios-using-hooks;verify-home-page",
+        "after": [
+          {
+            "result": {
+              "duration": 106976,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitionForTaggedHooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 59566,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "clicking on home page",
+            "match": {
+              "location": "StepDefinitionForTaggedHooks.clicking_on_home_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 66455,
               "status": "passed"
             },
             "line": 11,
             "name": "home page should be opened",
             "match": {
-              "location": "StepDefinitionForTags.home_page_should_be_opened()"
+              "location": "StepDefinitionForTaggedHooks.home_page_should_be_opened()"
             },
             "keyword": "Then "
           }
@@ -38,55 +140,77 @@
         "tags": [
           {
             "line": 8,
-            "name": "@regression"
+            "name": "@Second"
           }
         ]
       },
       {
-        "line": 19,
-        "name": "Verify Mobiles page",
+        "before": [
+          {
+            "result": {
+              "duration": 201795,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitionForTaggedHooks.setUp()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Verify Items page",
         "description": "",
-        "id": "verify-the-scenarios-using-tags;verify-mobiles-page",
+        "id": "verify-the-scenarios-using-hooks;verify-items-page",
+        "after": [
+          {
+            "result": {
+              "duration": 93603,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitionForTaggedHooks.tearDown()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 108191,
+              "duration": 67670,
               "status": "passed"
             },
-            "line": 20,
-            "name": "clicking on mobiles page",
+            "line": 15,
+            "name": "clicking on items page",
             "match": {
-              "location": "StepDefinitionForTags.clicking_on_mobiles_page()"
+              "location": "StepDefinitionForTaggedHooks.clicking_on_items_page()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 79421,
+              "duration": 63213,
               "status": "passed"
             },
-            "line": 21,
-            "name": "mobiles page should be opened",
+            "line": 16,
+            "name": "items page should be opened",
             "match": {
-              "location": "StepDefinitionForTags.mobiles_page_should_be_opened()"
+              "location": "StepDefinitionForTaggedHooks.items_page_should_be_opened()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "line": 18,
-            "name": "@regression"
+            "line": 13,
+            "name": "@Third"
           }
         ]
       }
     ],
-    "name": "Verify the scenarios using Tags",
+    "name": "Verify the scenarios using Hooks",
     "description": "",
-    "id": "verify-the-scenarios-using-tags",
+    "id": "verify-the-scenarios-using-hooks",
     "keyword": "Feature",
-    "uri": "F:/Selenium/CucumberHandson/src/main/java/features/tagsDemo.feature"
+    "uri": "F:/Selenium/CucumberHandson/src/main/java/features/TaggedHooksDemo.feature"
   }
 ]
